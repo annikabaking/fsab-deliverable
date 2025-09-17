@@ -1,0 +1,26 @@
+.book {
+    position: relative;
+}
+
+.button {
+    position: absolute;
+    top: 274px;
+    left: 450px;
+    height: 40px;
+    width: 100px;
+    background-color: beige;
+    border-radius: 10px;
+    color: rgb(97, 55, 20);
+    border-color: rgb(97, 55, 20);
+    border-style: dashed;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+}
+
+.image {
+    height: 700px;
+}
