@@ -20,23 +20,23 @@ function Entries() {
 
     return (
         <div>
-            <h2>Entries</h2>
-            <button onClick={getEntries}>
+            <h2 className={styles.text}>Entries</h2>
+            <button onClick={getEntries} className={styles.button}>
                 Reload
             </button>
             <br />
             <br />
             <table className={styles.table}>
                 <tbody >
-                    <tr className={styles.row}>
-                        <th>Date</th>
-                        <th>Message</th>
+                    <tr>
+                        <th className={styles.text}>Date</th>
+                        <th className={styles.text}>Message</th>
                     </tr>
                     {
                         entries.map((entry) =>
-                            <tr key={entry.id} className={styles.row}>
-                                <td>{entry.Date}</td>
-                                <td>{entry.Body}</td>
+                            <tr key={entry.id}>
+                                <td className={styles.text}>{entry.Date}</td>
+                                <td className={styles.text}>{entry.Body}</td>
                             </tr>
                         )
                     }

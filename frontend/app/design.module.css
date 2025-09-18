@@ -1,3 +1,16 @@
+.page {
+    background-color: rgb(253, 202, 163);
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+
+.title {
+    font-family: cursive;
+    font-size: 40px;
+    color: rgb(97, 55, 20);
+}
+
 .book {
     position: relative;
 }
@@ -19,6 +32,9 @@
     justify-content: center;
 
     text-decoration: none;
+
+    font-family: cursive;
+    color: rgb(97, 55, 20);
 }
 
 .image {

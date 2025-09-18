@@ -17,6 +17,9 @@ function AddEntry() {
             },
             body: JSON.stringify(newEntry)
         })
+
+        setDate("");
+        setBody("");
     }
     // NOTE: this is not the best way to collect data, but is good for demo purposes!
     const [Date, setDate] = useState("")
@@ -24,25 +27,24 @@ function AddEntry() {
 
     return (
         <div>
-            <h3>Write New Entry</h3>
-            <button onClick={onSubmit}>Submit</button>
-            <h4>Main Info</h4>
-            <div className={styles.mainForm}>
+            <h2 className={styles.text}>New Entry</h2>
+            <div>
                 <div>
-                    <label htmlFor="Date">Date: </label>
+                    <label htmlFor="Date" className={styles.text}>Date: </label>
                     <input
                         name="Date"
                         value={Date}
                         onChange={(event) => setDate(event.target.value)}
                     />
                 </div>
-                <div>
-                    <label htmlFor="Body">Message: </label>
+                <div className={styles.messageBox}>
+                    <label htmlFor="Body" className={styles.text}>Message: </label>
                     <input
                         value={Body}
                         onChange={(event) => setBody(event.target.value)}
                     />
                 </div>
+                <button onClick={onSubmit} className={styles.button}>Submit</button>
             </div>
         </div>
     )
